@@ -5,14 +5,14 @@ class TwitterMessage extends React.Component {
     super();
 
     this.state = {
-      tweet: ""
+      message: ""
     };
   }
 
   handleChange = (e)=>{
-    console.log(this.state.tweet)
+    console.log(this.state.message)
     this.setState({
-      tweet: e.target.value
+      message: e.target.value
     })
 
   }
@@ -22,8 +22,8 @@ class TwitterMessage extends React.Component {
     return (
       <div>
         <strong>Your message:</strong>
-        <h3>{this.props.maxChars - this.state.tweet.length}</h3>
-        <input name="tweet" onChange= {this.handleChange} type="text" value={this.state.tweet}/>
+        <h3>{this.props.maxChars - this.state.message.length}</h3>
+        <input name="message" onChange= {this.handleChange} type="text" value={this.state.message}/>
       </div>
     );
   }

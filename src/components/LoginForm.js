@@ -13,7 +13,6 @@ class LoginForm extends React.Component {
 
 
   handleChange = (e)=>{
-    console.log(this.state)
     this.setState({
       [e.target.name]:e.target.value
     })
@@ -21,7 +20,7 @@ class LoginForm extends React.Component {
 
   handleSubmit = (e)=>{
     e.preventDefault()
-    console.log(e.target)
+     if (!this.state.username || !this.state.password) return
     this.props.onSubmit(this.state)
   }
 
